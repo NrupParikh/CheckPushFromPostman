@@ -39,6 +39,9 @@ Body [ JSON ]
     }
 }
 
+### Example of FCM Token
+- f9iTLySfQUuD_F38o945_y:APA91bHD1twz3LN0wRYuKrEIjlhJOk77gtAGsyI0AWOaYJD1zSNlW2nCINfZvEmQHzgq5HEJTSVoNg3L6TFqaZ6_rwWMzXNa4n1b1FZf2BpgrWeCdO09baNfzw5Lm10BlSgG3qfqtdT8
+
 
 ~~~
 
@@ -47,9 +50,6 @@ Body [ JSON ]
 ~~~
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 ~~~
-
-### Example of FCM Token
-- f9iTLySfQUuD_F38o945_y:APA91bHD1twz3LN0wRYuKrEIjlhJOk77gtAGsyI0AWOaYJD1zSNlW2nCINfZvEmQHzgq5HEJTSVoNg3L6TFqaZ6_rwWMzXNa4n1b1FZf2BpgrWeCdO09baNfzw5Lm10BlSgG3qfqtdT8
 
 ------------------------------------------------------------
 ### Reference
