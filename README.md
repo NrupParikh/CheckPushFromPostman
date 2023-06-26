@@ -70,7 +70,7 @@ Body [ JSON ]
     }
 
 
-// Also set pending intent in Firebase messaging code
+// Also set pending intent in Firebase messaging code in onMessageReceived()
 
         var intentFlagType = PendingIntent.FLAG_ONE_SHOT
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
