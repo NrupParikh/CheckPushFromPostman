@@ -51,6 +51,34 @@ Body [ JSON ]
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 ~~~
 
+### In Fragment onViewCreated()
+~~~
+    private fun checkNotificationPermission() {
+        if (Build.VERSION.SDK_INT >= 33) {
+            if (ContextCompat.checkSelfPermission(
+                    requireContext(),
+                    Manifest.permission.POST_NOTIFICATIONS
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    requireActivity(),
+                    arrayOf(Manifest.permission.POST_NOTIFICATIONS),
+                    101
+                );
+            }
+        }
+    }
+
+
+// Also set pending intent in Firebase messaging code
+
+        var intentFlagType = PendingIntent.FLAG_ONE_SHOT
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            intentFlagType = PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE;  // or only use FLAG_MUTABLE >> if it needs to be used with inline replies or bubbles.
+        }
+        val pendingIntent =
+            PendingIntent.getActivity(this, 0, intent, intentFlagType)
+~~~
 ------------------------------------------------------------
 ### Reference
 - https://developer.android.com/develop/ui/views/notifications/notification-permission
